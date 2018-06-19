@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/comm_title_view" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/title_include"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:text="2018-06-12笔记"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/title_tv"
+        android:background="#f9f9f9" />
+
+    <View
+        android:id="@+id/note_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_view" />
+
+    <include layout="@layout/comm_btn" />
+
+    <RelativeLayout
+        android:id="@+id/change_loading_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="转文字中…请勿退出"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
