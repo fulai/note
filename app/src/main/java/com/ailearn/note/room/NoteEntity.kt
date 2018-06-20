@@ -3,12 +3,13 @@ package com.ailearn.note.room
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
+import java.io.Serializable
 
 /**
  * Created by fulai on 2018/6/17.
  */
 @Entity(tableName = "note")
-class NoteEntity {
+class NoteEntity : Serializable {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Int? = null
